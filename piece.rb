@@ -9,10 +9,10 @@ class Piece
   include PerformJump
   include KingMoves
 
-  attr_accessor :position, :board, :jumping, :king
+  attr_accessor :position, :board, :king
   attr_reader :color
 
-  def initialize(board, color, position, jumping = false, king = false)
+  def initialize(board, color, position, king = false)
     @board = board
     @color = color
     @position = position
@@ -34,17 +34,17 @@ class Piece
   end
 
   def dupe_piece
-    Piece.new(@board.dupe_current_board, @color, @position, @jumping, @king)
+    Piece.new(@board.dupe_current_board, @color, @position, @king)
   end
 
-  def perform_move(direction)
-    if check_valid_slide?(direction)
-      perform_slide(direction)
-    elsif check_valid_jump?(direction)
-      perform_jump(direction)
+  def perform_move(new_position)
+    if check_valid_slide?(new_position)
+      perform_slide(new_position)
+    elsif check_valid_jump?(new_position)
+      perform_jump(new_position)
     else
-      print "\nInvalid move from PERFORM MOVE\n\n"
-      # raise InvalidMoveError.new("")
+      # print "\nInvalid move from PERFORM MOVE\n\n"
+      # raise InvalidMoveError.new("Invalid move from PERFORM MOVE")
       return false
     end
   end

@@ -6,6 +6,7 @@ require_relative 'piece'
 
 class Board
   attr_reader :board
+  attr_writer :selected
 
   def initialize
     @board = Array.new(8) { Array.new(8) }
@@ -14,9 +15,9 @@ class Board
   def display_board
     system("clear")
     print "\n\n\n"
-    print "    0  1  2  3  4  5  6  7   ".white.on_blue + "\n"
+    print "       " + "    0  1  2  3  4  5  6  7   ".white.on_blue + "\n"
     @board.each_with_index do |row, i|
-      print " #{i} ".on_blue
+      print "       " + " #{i} ".on_blue
       row.each_with_index do |space, j|
         if space.nil?
           print "   ".on_red if (i + j) % 2 == 0
@@ -28,7 +29,7 @@ class Board
       end
       print "  ".on_blue + "\n"
     end
-    print "                             ".on_blue + "\n"
+    print "       " + "                             ".on_blue + "\n"
   end
 
   def set_up_game_pieces
