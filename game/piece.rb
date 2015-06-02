@@ -1,8 +1,10 @@
 
+require 'require_all'
 require_relative 'error'
-require_relative 'perform_slide'
-require_relative 'perform_jump'
-require_relative 'king_moves'
+# require_relative 'perform_slide'
+# require_relative 'perform_jump'
+# require_relative 'king_moves'
+require_all './modules'
 
 class Piece
   include PerformSlide
@@ -65,4 +67,3 @@ class Piece
     self.king = true
   end
 end
-
