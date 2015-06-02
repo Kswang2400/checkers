@@ -1,4 +1,4 @@
-# Under Construction! Check back soon
+# Under Construction! Check Back Soon
 Game incomplete, but feel free to download and test it!
 
 # Checkers!
@@ -16,9 +16,9 @@ https://github.com/kswang2400/ruby-curriculum/blob/master/projects/w2d4-checkers
 ##Screenshots
 
 ####New Game!
-<img src=./screenshots/new-game.png
-  align=middle width=500 height=400 />
+<img src=./screenshots/new_game.png
+  align=middle width=350 height=400 />
 
 ####King Me!
 <img src=./screenshots/king_me.png
-  align=middle width=500 height=400 />
+  align=middle width=350 height=400 />
