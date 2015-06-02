@@ -17,8 +17,8 @@ https://github.com/kswang2400/ruby-curriculum/blob/master/projects/w2d4-checkers
 
 ####New Game!
 <img src=./screenshots/new_game.png
-  align=middle width=350 height=400 />
+  style="float: left" width=350 height=400 />
 
 ####King Me!
 <img src=./screenshots/king_me.png
-  align=middle width=350 height=400 />
+  style="float: right" width=350 height=400 />
